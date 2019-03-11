@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="testimonials" resource="default" engine="innodb" comment="Testimonials">
+        <column xsi:type="int" name="id" padding="6" unsigned="true" nullable="false" identity="true"
+                comment="Id"/>
+        <column xsi:type="varchar" name="title" length="255" nullable="true" comment="Name"/>
+        <column xsi:type="text" name="content" nullable="true" comment="Content"/>
+        <column xsi:type="varchar" name="user_name" length="255" nullable="true" comment="User Name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <index referenceId="TESTIMONIALS_USER_NAME" indexType="btree">
+            <column name="user_name"/>
+        </index>
+    </table>
+</schema>

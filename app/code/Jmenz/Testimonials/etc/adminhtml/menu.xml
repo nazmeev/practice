@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Jmenz_Testimonials::testimonials" title="Testimonials" translate="title" module="Jmenz_Testimonials" sortOrder="90" parent="Magento_Backend::marketing" resource="Jmenz_Testimonials::base"/>
+        <add id="Jmenz_Testimonials::testimonials_list" title="Testimonials" translate="title" module="Jmenz_Testimonials" sortOrder="10" parent="Jmenz_Testimonials::testimonials" action="jm_testimonials/testimonials" resource="Jmenz_Testimonials::base"/>
+    </menu>
+</config>
